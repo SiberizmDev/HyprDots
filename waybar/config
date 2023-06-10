@@ -1,0 +1,23 @@
+{
+  "include": "~/.config/hypr/waybar/modules",
+  "layer": "top",
+  // "mode": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "position": "top",
+  "spacing": 5,
+  "fixed-center": true,
+  "ipc": true,
+  "margin-left": 0,
+  "margin-right": 0,
+  // "hyprland/window"
+  "modules-left": ["wlr/workspaces","custom/spotify"],
+  "modules-center": ["battery", "clock", "custom/weather"],
+  "modules-right": ["disk", "memory", "pulseaudio", "network", "tray",],
+  "hyprland/window": {
+    "max-length": 30
+  },
+  "custom/spotify": {
+    "max-length": 25
+  },
+}

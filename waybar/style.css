@@ -1,0 +1,196 @@
+* {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 12px;
+    /* color: #3A3B3C; */
+}
+
+window#waybar {
+  /* Transparent waybar. Make sure to comment out background-color: and border: */
+  background: rgba(0,0,0,0.3);
+  /* background-color: #1e1e2e; */
+  /* border: 2px solid #313244; */
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+tooltip {
+    background: #1e1e2e;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #11111b;
+}
+
+window#waybar.hidden {
+  opacity: 0.5;
+}
+
+#backlight,
+#battery,
+#clock,
+#cpu,
+#disk,
+#memory,
+#tray,
+#pulseaudio,
+#bluetooth,
+#cutom-terminal,
+#window,
+#custom-menu,
+#custom-power,
+#custom-weather,
+#custom-updater,
+#custom-keybindings,
+#custom-hyprpicker,
+#custom-playerlabel,
+#custom-playerctl
+#custom-cycle_wall,
+#workspaces,
+#network {
+	border-radius: 8px;
+	margin: 6px 0px;
+	padding: 0px 15px;
+  background: rgba(0,0,0,0.5);
+  color: #F9E2AF;
+  /*border: 2px solid #3a3b3c; */
+}
+
+#workspaces {
+	margin: 6px 6px;
+	padding: 0px 8px;
+  color: #F9E2AF;
+}
+
+#backlight {
+	color: #cba6f7;
+}
+
+#battery {
+	color: #fff;
+}
+
+@keyframes blink {
+    to {
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background: rgba(249, 226, 175, .7);
+    color: #f38ba8;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#clock {
+  color: #fff;
+}
+
+#cpu {
+	color: #89dceb;
+}
+
+#memory {
+	color: #eba0ac;
+}
+
+#disk {
+	color: #b4befe;
+}
+
+#tray {
+  margin-right: 6px;
+	color: #b4befe;
+}
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#workspaces button {
+  background: rgba(0,0,0,0.0);
+  color: #d9e0ee;
+  /* border: 2px solid #3a3b3c; */
+  margin-right: 2px;
+}
+
+#workspaces button.active {
+  color: rgb(249,226,175);
+}
+
+#custom-menu {
+	color: #f5c2e7;
+}
+
+#custom-power {
+	color: #f38ba8;
+  margin-right: 4px;
+  font-size: 24px;
+}
+
+#custom-updater {
+	color: #e6ed7b;
+}
+
+#custom-uptime {
+	color: #e6ed7b;
+}
+
+#custom-weather {
+  color: #fff;
+}
+
+#custom-hyprpicker {
+  color: #fff;
+}
+
+#custom-cycle_wall {
+	color: #89dceb;
+}
+
+#custom-vpn_check {
+	color: #a6e3a1;
+}
+
+#custom-cputemp {
+  color: #86b4fa;
+}
+
+#custom-keybindings {
+  color: #86b4fa;
+  font-size: 24px;
+}
+
+#custom-spotify {
+    padding: 0 10px;
+    margin: 6px 4px;
+    border-radius: 8px;
+    background-color: #6BD999;
+    color: black;
+}
+
+#pulseaudio {
+	color: #fab387;
+}
+
+#pulseaudio.bluetooth {
+	color: #f5c2e7;
+}
+#pulseaudio.muted {
+	
+	color: #cdd6f4;
+}
+
+#network {
+	color: #89b4fa;
+}
+#network.disconnected,#network.disabled {
+	
+	color: #cdd6f4;
+}
